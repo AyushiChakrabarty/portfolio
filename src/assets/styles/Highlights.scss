@@ -111,11 +111,23 @@
   }
 }
 
+@media screen and (max-width: 1024px) {
+  .highlights-inner {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .highlights-container {
     padding-left: 1rem;
     padding-right: 1rem;
   }
+
+  .highlights-inner h1 {
+    font-size: 1.65rem !important;
+  }
+
   .highlight-card-content {
     padding: 1rem 1.25rem;
   }
@@ -126,9 +138,19 @@
     padding-left: 0.75rem;
     padding-right: 0.75rem;
   }
+
+  .highlights-inner h1 {
+    font-size: 1.5rem !important;
+  }
+
+  .highlights-subtitle {
+    font-size: 0.9rem;
+  }
+
   .highlight-card h3 {
     font-size: 1.05rem;
   }
+
   .highlight-card p {
     font-size: 0.9rem;
   }

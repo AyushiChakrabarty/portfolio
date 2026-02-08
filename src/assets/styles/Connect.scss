@@ -96,21 +96,46 @@
   box-shadow: 0 6px 20px rgba(30, 136, 229, 0.4);
 }
 
+@media screen and (max-width: 1024px) {
+  .connect-section {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .connect-section {
     padding-left: 1rem;
     padding-right: 1rem;
+    padding-top: clamp(1.5rem, 4%, 3rem);
+    padding-bottom: clamp(1.5rem, 3%, 2.5rem);
   }
+
   .connect-content {
     text-align: center;
+  }
+
+  .connect-content h1 {
+    font-size: 1.75rem !important;
   }
 }
 
 @media screen and (max-width: 480px) {
+  .connect-section {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
   .connect-tagline {
     font-size: 0.95rem;
   }
+
   .connect-message {
+    font-size: 0.95rem;
+  }
+
+  .connect-email {
+    padding: 0.65em 1.5em;
     font-size: 0.95rem;
   }
 }

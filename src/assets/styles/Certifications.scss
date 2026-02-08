@@ -162,11 +162,23 @@
   }
 }
 
+@media screen and (max-width: 1024px) {
+  .certifications-container {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .certifications-container {
     padding-left: 1rem;
     padding-right: 1rem;
   }
+
+  .certifications-inner h1 {
+    font-size: 1.65rem !important;
+  }
+
   .cert-card-content {
     padding: 1rem 1.2rem;
   }
@@ -177,6 +189,15 @@
     padding-left: 0.75rem;
     padding-right: 0.75rem;
   }
+
+  .certifications-inner h1 {
+    font-size: 1.5rem !important;
+  }
+
+  .certifications-subtitle {
+    font-size: 0.9rem;
+  }
+
   .cert-card h3 {
     font-size: 0.98rem;
   }

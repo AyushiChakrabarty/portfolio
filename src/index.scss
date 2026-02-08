@@ -57,6 +57,20 @@ p, a, h1, h2, h3, h4, h5, label, button {
   }
 }
 
+@media screen and (max-width: 1024px) {
+  .navigation-bar button {
+    font-size: 1rem;
+    padding: 6px 8px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navigation-bar button {
+    font-size: 0.95rem;
+    padding: 6px 6px;
+  }
+}
+
 .navigation-bar-responsive {
   span, p {
     color: #0d1116;
@@ -81,6 +95,36 @@ p, a, h1, h2, h3, h4, h5, label, button {
     width: 100%;
     height: 450px;
     object-fit: cover;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    margin-top: 56px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 1rem !important;
+  }
+
+  .container {
+    margin-top: 56px;
+  }
+
+  .header-image,
+  .header-image img {
+    height: 280px;
+  }
+
+  /* Section headings scale down on phone */
+  .skills-container > h1,
+  .projects-container > h1,
+  .items-container > h1,
+  .certifications-inner > h1,
+  .highlights-inner > h1 {
+    font-size: 1.75rem !important;
   }
 }
 
@@ -166,11 +210,15 @@ p, a, h1, h2, h3, h4, h5, label, button {
   }
 }
 
-@media screen {
-  @media (max-width: 768px) {
-    .items-container {
-      padding: 5% 5%;
-    }
+@media screen and (max-width: 768px) {
+  .items-container {
+    padding: 5% 5%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .items-container {
+    padding: 4% 0.75rem;
   }
 }
 
