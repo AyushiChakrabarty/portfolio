@@ -23,8 +23,8 @@ function Project() {
           <p>Developed and evaluated an advanced RAG pipeline using hybrid retrieval, reranking, and query optimization, improving answer correctness by 18% and enhancing precision, recall, and faithfulness metrics.</p>
         </div>
         <div className="project">
-          <a href="#" rel="noreferrer"><img src={PROJECT_IMAGES.cut} className="zoom" alt="Robotic simulations" width="100%" loading="lazy" /></a>
-          <a href="#" rel="noreferrer"><h2>Contrastive Unpaired Translation (CUT) for Robotic Simulations</h2></a>
+          <a href="#projects" rel="noreferrer"><img src={PROJECT_IMAGES.cut} className="zoom" alt="Robotic simulations" width="100%" loading="lazy" /></a>
+          <a href="#projects" rel="noreferrer"><h2>Contrastive Unpaired Translation (CUT) for Robotic Simulations</h2></a>
           <p>Optimized CUT models on robotic simulation datasets reducing FID scores by ~25% and implementing a FastCUT variant that trained 1.7× faster with no loss in output quality.</p>
         </div>
         <div className="project">
