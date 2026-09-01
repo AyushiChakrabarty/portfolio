@@ -5,7 +5,7 @@ import SchoolIcon from '@mui/icons-material/School';
 import '../assets/styles/Main.scss';
 import avatar from "../assets/images/avatar.jpeg";
 
-const INTRO_TEXT = "An AI/ML Engineer who builds products across ML Systems, Computer Vision, NLP, and Generative AI, with a focus on solving real user problems.\n\nI enjoy translating complex, loosely defined problems into structured, scalable AI solutions where the impact is visible.";
+const INTRO_TEXT = "AI/ML Engineer with 3+ years building machine learning and Generative AI systems across NLP, computer vision, and multi-agent architectures.\n\nExperienced in end-to-end ML pipelines, fine-tuning transformers, RAG systems, and cloud-native applications on AWS. Co-founded an AI startup taking a product from research prototype to institutional pilot.";
 const TYPING_MS = 18;
 const PAUSE_AT_END_MS = 2500;
 const PAUSE_AT_START_MS = 800;

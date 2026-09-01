@@ -1,0 +1,149 @@
+.publications-container {
+  padding: clamp(2rem, 5%, 4rem) clamp(1rem, 6%, 4rem);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.publications-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+
+  h1 {
+    margin-bottom: 0.25em;
+  }
+}
+
+.publications-subtitle {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  opacity: 0.85;
+  font-size: 1rem;
+}
+
+.publications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: left;
+}
+
+.pub-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+
+  .light-mode & {
+    background: rgba(255, 255, 255, 0.7);
+    border-color: rgba(0, 0, 0, 0.08);
+  }
+
+  &:hover {
+    border-color: rgba(30, 136, 229, 0.35);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    .light-mode & {
+      border-color: rgba(30, 136, 229, 0.4);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    }
+  }
+}
+
+.pub-card-content {
+  padding: 1.15rem 1.4rem;
+}
+
+.pub-year {
+  display: inline-block;
+  font-size: 0.78rem;
+  opacity: 0.75;
+  margin-bottom: 0.35rem;
+  color: #b8bcc4;
+}
+
+.light-mode .pub-year {
+  color: #6b7280;
+}
+
+.pub-card h3 {
+  font-size: 1.05rem;
+  margin: 0 0 0.4rem 0;
+  line-height: 1.4;
+  font-weight: 600;
+  color: #f0f2f5;
+}
+
+.light-mode .pub-card h3 {
+  color: #0d1116;
+}
+
+.pub-authors {
+  font-size: 0.9rem;
+  margin: 0 0 0.3rem 0;
+  opacity: 0.88;
+  color: #d0d4d9;
+  font-style: italic;
+}
+
+.light-mode .pub-authors {
+  color: #4b5563;
+}
+
+.pub-venue {
+  font-size: 0.88rem;
+  margin: 0;
+  opacity: 0.8;
+  color: #b8bcc4;
+  line-height: 1.45;
+}
+
+.light-mode .pub-venue {
+  color: #6b7280;
+}
+
+.pub-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.85rem;
+  margin-top: 0.6rem;
+  color: #1e88e5;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 0.9;
+    text-decoration: underline;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .publications-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .publications-inner h1 {
+    font-size: 1.65rem !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .publications-container {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  .publications-inner h1 {
+    font-size: 1.5rem !important;
+  }
+
+  .publications-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .pub-card h3 {
+    font-size: 0.98rem;
+  }
+}

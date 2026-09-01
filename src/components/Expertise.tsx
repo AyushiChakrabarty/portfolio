@@ -8,10 +8,10 @@ import '../assets/styles/Expertise.scss';
 
 const programmingLabels = [
   "Python",
+  "SQL",
   "C++",
   "Java",
-  "MySQL",
-  "MongoDB",
+  "JavaScript",
   "R",
   "MATLAB",
 ];
@@ -20,65 +20,60 @@ const mlLabels = [
   "PyTorch",
   "TensorFlow",
   "Keras",
-  "Scikit-Learn",
-  "XGBoost",
+  "Scikit-learn",
+  "LLMs",
+  "Hugging Face",
+  "OpenCV",
   "NumPy",
   "Pandas",
-  "Matplotlib",
-  "Seaborn",
-  "OpenCV",
-  "GDAL",
-  "Rasterio",
+  "XGBoost",
 ];
 
 const genAiLabels = [
+  "RAG",
+  "Ragas",
   "LangChain",
   "LangGraph",
-  "OpenAI SDK",
-  "RAG",
+  "OpenAI / Azure OpenAI",
   "LlamaIndex",
-  "Pydantic",
   "CrewAI",
   "Ollama",
   "Prompt Engineering",
+  "FAISS",
+  "ChromaDB",
+  "Weaviate",
   "NLTK",
   "spaCy",
-  "Hugging Face",
-  "Weaviate",
-  "ChromaDB",
-  "FAISS",
 ];
 
 const cloudDevOpsLabels = [
-  "AWS",
-  "GCP",
+  "AWS (ECS, RDS, S3, SageMaker, Bedrock)",
   "Azure",
-  "Azure Databricks",
+  "GCP",
   "Docker",
   "CI/CD",
+  "OpenTelemetry",
+  "FastAPI",
+  "PostgreSQL",
+  "MySQL",
+  "Redis",
   "Git",
   "Linux",
-  "Apache Spark",
-  "FastAPI",
-  "asyncio",
 ];
 
 const softwareLabels = [
+  "React",
+  "REST APIs",
+  "Streamlit",
   "HTML",
   "CSS",
-  "Bootstrap",
-  "Streamlit",
-  "React",
-  "Django",
-  "Flask",
-  "Agile",
+  "Agile / Scrum",
   "Jira",
 ];
 
 const hardwareLabels = [
   "GPU Programming",
   "Xilinx-Vitis",
-  "GROQ",
   "Compression & Quantization",
 ];
 
@@ -133,9 +128,9 @@ function Expertise() {
           <div className="skill">
             <div className="skill-header">
               <FontAwesomeIcon icon={faCloud} size="3x" />
-              <h3>Data, Cloud & DevOps</h3>
+              <h3>Cloud, MLOps & Data</h3>
             </div>
-            <p>End-to-end pipelines, visualization, and deployment on AWS, GCP, and Azure with Docker and CI/CD. Hardware optimization for edge and low-resource deployment.</p>
+            <p>End-to-end pipelines and cloud-native deployment on AWS with Docker, CI/CD, and observability. Hardware optimization for edge and low-resource inference.</p>
             <div className="flex-chips">
               <span className="chip-title">Tech stack:</span>
               {cloudDevOpsLabels.map((label, index) => (
@@ -150,9 +145,9 @@ function Expertise() {
           <div className="skill">
             <div className="skill-header">
               <FontAwesomeIcon icon={faCode} size="3x" />
-              <h3>Software Development</h3>
+              <h3>Backend & Software</h3>
             </div>
-            <p>Full-stack and rapid prototyping with Streamlit, web technologies, and agile methodologies.</p>
+            <p>Full-stack and rapid prototyping with FastAPI, React, Streamlit, and agile methodologies.</p>
             <div className="flex-chips">
               <span className="chip-title">Tech stack:</span>
               {softwareLabels.map((label, index) => (

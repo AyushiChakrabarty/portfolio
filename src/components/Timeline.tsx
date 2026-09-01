@@ -16,27 +16,29 @@ function Timeline() {
             className="vertical-timeline-element--work"
             contentStyle={{ background: 'white', color: 'rgb(39, 40, 34)' }}
             contentArrowStyle={{ borderRight: '7px solid white' }}
-            date="Aug 2025 – Present"
+            date="Jun 2026 – Present"
             iconStyle={{ background: '#0d1116', color: 'white' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
-            <h3 className="vertical-timeline-element-title">Data Analyst / MLE (Affiliate)</h3>
+            <h3 className="vertical-timeline-element-title">Research Scientist I</h3>
             <h4 className="vertical-timeline-element-subtitle">Georgia Institute of Technology</h4>
-            <p>Building vision-based ML systems with retrieval and multi-agent pipelines to automatically grade and correct open-ended handwritten and visual math responses at scale.</p>
+            <p>Architecting a multi-agent AI grading pipeline integrating parser, symbolic reasoning, semantic analysis, RAG, vector databases, and feedback agents to evaluate handwritten mathematical responses.</p>
+            <p>Designing error localization across conceptual, procedural, and notational dimensions, generating explainable, rubric-aligned feedback beyond binary correctness.</p>
           </VerticalTimelineElement>
 
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
             contentStyle={{ background: 'white', color: 'rgb(39, 40, 34)' }}
             contentArrowStyle={{ borderRight: '7px solid white' }}
-            date="May 2025 – Aug 2025"
+            date="Jun 2025 – Present"
             iconStyle={{ background: '#0d1116', color: 'white' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
-            <h3 className="vertical-timeline-element-title">Startup Founder</h3>
-            <h4 className="vertical-timeline-element-subtitle">Georgia Institute of Technology</h4>
-            <p>Launched an AI platform for privacy-first analysis of open-ended survey feedback. Developed end-to-end ML pipelines that cut analysis from weeks to minutes; validated with 30+ customer interviews and 1,500+ attendees at Create-X Demo Day.</p>
-            <p>Won 1st prize at CRIDC 2025 Innovation Competition and advanced to Quadrant-I Startup Launch with $10K in funding and external grants (including Georgia Research Alliance and Georgia AI for Manufacturing); filed a provisional patent.</p>
+            <h3 className="vertical-timeline-element-title">Co-Founder</h3>
+            <h4 className="vertical-timeline-element-subtitle">Feedback Fusion, Inc.</h4>
+            <p>Co-founded and lead development of an AI-powered platform using NLP and LLM pipelines to transform unstructured student and survey feedback into decision-ready insights.</p>
+            <p>Designed and deployed containerized backend and ML services on AWS (ECS, RDS, S3, ALB) with GitHub Actions CI/CD and OpenTelemetry observability; fine-tuned transformers, PII-redaction pipelines, and Canvas LTI 1.3 integrations (OIDC/JWT).</p>
+            <p>Took the product from research prototype toward institutional pilot—GRA grant funding, Georgia Tech Quadrant-I Startup Launch, CRIDC 2025 winner ($10K); led hiring and 70+ customer discovery interviews; live demo to 1,500+ at Create-X Demo Day.</p>
           </VerticalTimelineElement>
 
           <VerticalTimelineElement
@@ -48,8 +50,8 @@ function Timeline() {
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
             <h3 className="vertical-timeline-element-title">Generative AI Researcher (Team Lead)</h3>
-            <h4 className="vertical-timeline-element-subtitle">Georgia Institute of Technology</h4>
-            <p>Led work on resource-efficient diffusion models, cutting VRAM from 16GB+ to 8GB so low-resource labs could run state-of-the-art generative models for nanophotonics research.</p>
+            <h4 className="vertical-timeline-element-subtitle">Georgia Tech VIP Program</h4>
+            <p>Led a research team applying diffusion models to nanophotonic structure design, reducing GPU memory from 16GB+ to 8GB and enabling adoption on low-resource lab hardware.</p>
           </VerticalTimelineElement>
 
           <VerticalTimelineElement
@@ -62,20 +64,22 @@ function Timeline() {
           >
             <h3 className="vertical-timeline-element-title">NLP Project Assistant</h3>
             <h4 className="vertical-timeline-element-subtitle">Georgia Institute of Technology</h4>
-            <p>Developed an NLP service for real-time survey categorization. Halved processing time for 2K+ student records and cut false positives by ~20%, with an easy-to-use Streamlit frontend.</p>
+            <p>Built an end-to-end NLP service combining a Streamlit interface with a fine-tuned BERT backend for real-time categorization of unstructured MOOC survey responses from 2,000+ students.</p>
+            <p>Halved processing time and reduced false positives by ~20% through iterative human-in-the-loop evaluation and model refinement.</p>
           </VerticalTimelineElement>
 
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
             contentStyle={{ background: 'white', color: 'rgb(39, 40, 34)' }}
             contentArrowStyle={{ borderRight: '7px solid white' }}
-            date="Aug 2022 – June 2023"
+            date="Aug 2022 – Jun 2023"
             iconStyle={{ background: '#0d1116', color: 'white' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
             <h3 className="vertical-timeline-element-title">Computer Vision Intern</h3>
             <h4 className="vertical-timeline-element-subtitle">Space Applications Centre (SAC), ISRO, India</h4>
-            <p>Built a real-time wildfire detection system from 200GB+ Landsat-8 imagery using semantic segmentation (~97% recall). Optimized for edge: 2.5× lower power (1–1.6W) via quantization and pruning on ZCU104.</p>
+            <p>Engineered a real-time wildfire-detection system using semantic segmentation on 200GB+ Landsat-8 imagery (ResNet, SqueezeNet, VGG, Inception), achieving ~97% recall.</p>
+            <p>Reduced edge-inference power draw 2.5× to 1–1.6W through quantization and pruning on a Xilinx ZCU104 MPSoC.</p>
           </VerticalTimelineElement>
 
           <VerticalTimelineElement
@@ -101,7 +105,7 @@ function Timeline() {
           >
             <h3 className="vertical-timeline-element-title">Machine Learning Intern</h3>
             <h4 className="vertical-timeline-element-subtitle">Vellore Institute of Technology (VIT), India</h4>
-            <p>Delivered 95.87% accuracy for ocular disease classification via optimized federated learning (FL) on non-IID data, while reducing FL vs. centralized gap to 0.33% (PyTorch/Flower) and preserving data privacy.</p>
+            <p>Delivered 95.87% accuracy for ocular disease classification via optimized federated learning on non-IID data, reducing the FL vs. centralized gap to 0.33% (PyTorch/Flower) while preserving data privacy.</p>
           </VerticalTimelineElement>
         </VerticalTimeline>
       </div>
