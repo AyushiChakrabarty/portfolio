@@ -1,32 +1,46 @@
 @import "glass";
 
-.vertical-timeline span {
-  color: white;
-  font-family: 'Courier Prime', monospace;
-}
-
 .vertical-timeline-element .vertical-timeline-element-date {
-  color: white;
+  color: var(--text-muted);
+  font-family: "Lato", sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
 }
 
-.svg-inline--fa {
-  color: white;
+.vertical-timeline-element .metric-text {
+  color: var(--accent-strong) !important;
+  font-weight: 600;
 }
 
 .dark-mode {
+  .vertical-timeline::before {
+    background-color: rgba(255, 255, 255, 0.14) !important;
+  }
+
   .vertical-timeline-element-content {
     @include glass-panel(12px);
-    color: #f0f2f5 !important;
-    box-shadow:
-      0 8px 32px rgba(0, 0, 0, 0.14),
-      inset 0 1px 0 rgba(255, 255, 255, 0.06) !important;
+    color: var(--text-primary) !important;
+    box-shadow: var(--shadow-soft), inset 0 1px 0 rgba(255, 255, 255, 0.06) !important;
   }
 
   .vertical-timeline-element p,
   .vertical-timeline-element h3,
-  .vertical-timeline-element h4,
-  .vertical-timeline-element span {
-    color: #f0f2f5 !important;
+  .vertical-timeline-element h4 {
+    color: var(--text-primary) !important;
+  }
+
+  .vertical-timeline-element p {
+    color: var(--text-secondary) !important;
+  }
+
+  .vertical-timeline-element h3 {
+    font-weight: 600;
+  }
+
+  .vertical-timeline-element h4 {
+    color: var(--text-muted) !important;
+    font-weight: 500;
   }
 
   .vertical-timeline-element-content-arrow {
@@ -35,30 +49,46 @@
 }
 
 .light-mode {
+  .vertical-timeline::before {
+    background-color: rgba(15, 23, 42, 0.2) !important;
+  }
+
   .vertical-timeline-element-content {
     @include glass-panel(12px);
-    color: rgb(39, 40, 34) !important;
+    color: var(--text-primary) !important;
   }
 
   .vertical-timeline-element p,
   .vertical-timeline-element h3,
-  .vertical-timeline-element h4,
-  .vertical-timeline-element span {
-    color: rgb(39, 40, 34) !important;
+  .vertical-timeline-element h4 {
+    color: var(--text-primary) !important;
+  }
+
+  .vertical-timeline-element p {
+    color: var(--text-secondary) !important;
+  }
+
+  .vertical-timeline-element h3 {
+    font-weight: 600;
+  }
+
+  .vertical-timeline-element h4 {
+    color: var(--text-muted) !important;
+    font-weight: 500;
   }
 
   .vertical-timeline-element .vertical-timeline-element-date {
-    color: rgb(39, 40, 34);
+    color: var(--text-muted);
   }
 
   .vertical-timeline-element-content-arrow {
-    border-right: 7px solid rgba(255, 255, 255, 0.55) !important;
+    border-right: 7px solid rgba(15, 23, 42, 0.08) !important;
   }
 }
 
 @media screen and (max-width: 1170px) {
   .vertical-timeline-element .vertical-timeline-element-date {
-    color: rgb(39, 40, 34);
+    color: var(--text-muted);
   }
 }
 

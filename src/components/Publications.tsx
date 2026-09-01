@@ -1,6 +1,7 @@
 import React from "react";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import { RevealOnScroll } from "./effects";
+import SectionHeader from "./SectionHeader";
 import "../assets/styles/Publications.scss";
 
 type PublicationItem = {
@@ -43,29 +44,29 @@ const PUBLICATIONS: PublicationItem[] = [
 
 function Publications() {
   return (
-    <div className="container publications-container" id="publications">
+    <div className="container section-block publications-container" id="publications">
       <div className="publications-inner">
         <RevealOnScroll>
-          <h1>Publications</h1>
-        </RevealOnScroll>
-        <RevealOnScroll delay={100}>
-          <p className="publications-subtitle">Peer-reviewed research, book chapters, and academic resources</p>
+          <SectionHeader
+            title="Publications"
+            subtitle="Peer-reviewed research, book chapters, and academic resources"
+          />
         </RevealOnScroll>
         <div className="publications-list">
           {PUBLICATIONS.map((pub, index) => (
             <RevealOnScroll key={index} delay={index * 80}>
-              <article className="pub-card">
+              <article className="pub-card glass-panel">
               <div className="pub-card-content">
-                <span className="pub-year">{pub.year}</span>
-                <h3>{pub.title}</h3>
-                <p className="pub-authors">{pub.authors}</p>
-                <p className="pub-venue">{pub.venue}</p>
+                <span className="card-meta">{pub.year}</span>
+                <h3 className="card-title">{pub.title}</h3>
+                <p className="card-subtitle pub-authors">{pub.authors}</p>
+                <p className="card-body pub-venue">{pub.venue}</p>
                 {pub.url ? (
                   <a
                     href={pub.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="pub-link"
+                    className="pub-link text-link"
                   >
                     View publication
                     <OpenInNewIcon fontSize="small" />

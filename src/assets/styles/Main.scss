@@ -19,7 +19,7 @@
 
 .hero-backdrop {
   position: absolute;
-  inset: -12% 0 0;
+  inset: -12% 0 -8%;
   background-image: url("../images/hero-wallpaper.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -34,19 +34,19 @@
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(135deg, rgba(13, 17, 22, 0.72) 0%, rgba(26, 26, 46, 0.58) 45%, rgba(22, 33, 62, 0.68) 100%),
-    radial-gradient(circle at 20% 20%, rgba(30, 136, 229, 0.12), transparent 35%);
+    linear-gradient(135deg, rgba(13, 17, 22, 0.78) 0%, rgba(26, 26, 46, 0.65) 45%, rgba(22, 33, 62, 0.74) 100%),
+    linear-gradient(180deg, transparent 62%, var(--surface-base) 100%);
   z-index: 1;
 }
 
 .light-mode .hero-backdrop {
-  opacity: 0.48;
+  opacity: 0.5;
 }
 
 .light-mode .hero-overlay {
   background:
-    linear-gradient(135deg, rgba(248, 249, 250, 0.58) 0%, rgba(232, 244, 252, 0.5) 50%, rgba(210, 230, 248, 0.55) 100%),
-    radial-gradient(circle at 80% 20%, rgba(30, 136, 229, 0.1), transparent 35%);
+    linear-gradient(135deg, rgba(232, 244, 252, 0.72) 0%, rgba(210, 230, 248, 0.66) 45%, rgba(187, 222, 251, 0.7) 100%),
+    linear-gradient(180deg, transparent 62%, var(--surface-base) 100%);
 }
 
 .about-section .hero-glass {
@@ -82,8 +82,11 @@
     display: none;
   }
 
-  p {
-    font-size: 1.5em;
+  h1 {
+    font-size: 5em;
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    color: var(--text-primary);
     margin-block-start: 0;
     margin-block-end: 0;
   }
@@ -94,6 +97,7 @@
     margin-top: 0;
     margin-bottom: 0.75em;
     max-width: 42em;
+    color: var(--text-secondary);
   }
 
   .main-intro:last-of-type {

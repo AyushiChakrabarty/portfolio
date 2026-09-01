@@ -5,6 +5,7 @@ import { faPython } from '@fortawesome/free-brands-svg-icons';
 import { faBrain, faWandMagicSparkles, faCloud, faCode } from '@fortawesome/free-solid-svg-icons';
 import Chip from '@mui/material/Chip';
 import { RevealOnScroll } from "./effects";
+import SectionHeader from "./SectionHeader";
 import '../assets/styles/Expertise.scss';
 
 const SKILLS = [
@@ -17,7 +18,7 @@ const SKILLS = [
   {
     icon: faBrain,
     title: "Machine Learning & AI",
-    description: "Building and deploying scalable ML systems—from classical models to deep learning and resource-efficient inference.",
+    description: "Building and deploying scalable ML systems, from classical models to deep learning and resource-efficient inference.",
     labels: ["PyTorch", "TensorFlow", "Keras", "Scikit-learn", "LLMs", "Hugging Face", "OpenCV", "NumPy", "Pandas", "XGBoost"],
   },
   {
@@ -42,10 +43,13 @@ const SKILLS = [
 
 function Expertise() {
   return (
-    <div className="container" id="expertise">
+    <div className="container section-block" id="expertise">
       <div className="skills-container">
         <RevealOnScroll>
-          <h1>Expertise</h1>
+          <SectionHeader
+            title="Expertise"
+            subtitle="Machine learning, generative AI, cloud, and full-stack engineering"
+          />
         </RevealOnScroll>
         <div className="skills-grid">
           {SKILLS.map((skill, index) => (
@@ -54,7 +58,7 @@ function Expertise() {
                 <FontAwesomeIcon icon={skill.icon} size="3x" />
                 <h3>{skill.title}</h3>
               </div>
-              <p>{skill.description}</p>
+              <p className="card-body">{skill.description}</p>
               <div className="flex-chips">
                 <span className="chip-title">Tech stack:</span>
                 {skill.labels.map((label) => (

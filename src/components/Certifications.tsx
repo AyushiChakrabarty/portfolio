@@ -1,6 +1,7 @@
 import React from "react";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import { RevealOnScroll } from "./effects";
+import SectionHeader from "./SectionHeader";
 import "../assets/styles/Certifications.scss";
 
 export type CertificationItem = {
@@ -56,28 +57,28 @@ const ONGOING = [
 
 function Certifications() {
   return (
-    <div className="container certifications-container" id="certifications">
+    <div className="container section-block certifications-container" id="certifications">
       <div className="certifications-inner">
         <RevealOnScroll>
-          <h1>Key Certifications</h1>
-        </RevealOnScroll>
-        <RevealOnScroll delay={100}>
-          <p className="certifications-subtitle">Professional credentials in AI, ML, and cloud</p>
+          <SectionHeader
+            title="Key Certifications"
+            subtitle="Professional credentials in AI, ML, and cloud"
+          />
         </RevealOnScroll>
         <div className="certifications-grid">
           {CERTIFICATIONS.map((cert, index) => (
             <RevealOnScroll key={index} delay={index * 70}>
-              <article className="cert-card">
+              <article className="cert-card glass-panel">
               <div className="cert-card-content">
-                <span className="cert-date">{cert.date}</span>
-                <h3>{cert.title}</h3>
-                <p className="cert-issuer">{cert.issuer}</p>
+                <span className="card-meta">{cert.date}</span>
+                <h3 className="card-title">{cert.title}</h3>
+                <p className="card-subtitle cert-issuer">{cert.issuer}</p>
                 {cert.url ? (
                   <a
                     href={cert.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="cert-link"
+                    className="cert-link text-link"
                   >
                     View credential
                     <OpenInNewIcon fontSize="small" />
@@ -90,8 +91,8 @@ function Certifications() {
             </RevealOnScroll>
           ))}
         </div>
-        <RevealOnScroll className="certifications-ongoing" delay={180}>
-          <h3 className="ongoing-title">In progress</h3>
+        <RevealOnScroll className="certifications-ongoing glass-panel" delay={180}>
+          <h3 className="ongoing-title card-title">In progress</h3>
           <ul className="ongoing-list">
             {ONGOING.map((item, index) => (
               <li key={index}>{item}</li>

@@ -1,7 +1,6 @@
 @import "glass";
 
 .education-container {
-  padding: clamp(2rem, 5%, 4rem) clamp(1rem, 6%, 4rem);
   width: 100%;
   box-sizing: border-box;
 }
@@ -9,11 +8,6 @@
 .education-inner {
   max-width: 900px;
   margin: 0 auto;
-  text-align: center;
-
-  h1 {
-    margin-bottom: 1.5rem;
-  }
 }
 
 .education-grid {
@@ -23,94 +17,35 @@
   text-align: left;
 }
 
-.edu-card {
-  @include glass-panel;
-  overflow: hidden;
-
-  &:hover {
-    @include glass-panel-hover;
-  }
-}
-
 .edu-card-content {
-  padding: 1.1rem 1.35rem;
-}
-
-.edu-date {
-  display: inline-block;
-  font-size: 0.78rem;
-  opacity: 0.75;
-  margin-bottom: 0.35rem;
-  color: #b8bcc4;
-}
-
-.light-mode .edu-date {
-  color: #6b7280;
-}
-
-.edu-card h3 {
-  font-size: 1.1rem;
-  margin: 0 0 0.35rem 0;
-  line-height: 1.35;
-  font-weight: 600;
-  color: #f0f2f5;
-}
-
-.light-mode .edu-card h3 {
-  color: #0d1116;
+  padding: 1.1rem 1.25rem;
 }
 
 .edu-school {
-  font-size: 0.95rem;
-  margin: 0 0 0.25rem 0;
-  opacity: 0.9;
-  color: #d0d4d9;
-}
-
-.light-mode .edu-school {
-  color: #4b5563;
+  margin: 0;
 }
 
 .honors-section {
-  margin-top: 2.5rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  margin-top: 1.75rem;
+  padding: 1.35rem 1.25rem;
   text-align: left;
 }
 
-.light-mode .honors-section {
-  border-top-color: rgba(0, 0, 0, 0.08);
-}
-
 .honors-title {
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin: 0 0 1rem 0;
-  color: #e6e8eb;
-}
-
-.light-mode .honors-title {
-  color: #0d1116;
+  font-size: 1.05rem;
+  margin: 0 0 0.85rem 0;
 }
 
 .honors-list {
   margin: 0;
-  padding-left: 1.25rem;
-  font-size: 0.95rem;
-  line-height: 1.8;
-  color: #d0d4d9;
-}
-
-.light-mode .honors-list {
-  color: #374151;
-}
-
-.honor-name {
-  font-weight: 500;
+  padding-left: 1.15rem;
+  font-size: 0.92rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
 }
 
 .honor-detail {
-  opacity: 0.8;
+  color: var(--text-muted);
 }
 
 @media screen and (min-width: 600px) {
@@ -119,28 +54,8 @@
   }
 }
 
-@media screen and (max-width: 768px) {
-  .education-container {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  .education-inner h1 {
-    font-size: 1.65rem !important;
-  }
-}
-
 @media screen and (max-width: 480px) {
-  .education-container {
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
-  }
-
-  .education-inner h1 {
-    font-size: 1.5rem !important;
-  }
-
-  .edu-card h3 {
-    font-size: 1rem;
+  .edu-card-content {
+    padding: 1rem 1.1rem;
   }
 }

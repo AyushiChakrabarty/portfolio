@@ -1,5 +1,6 @@
 import React from "react";
 import { RevealOnScroll } from "./effects";
+import SectionHeader from "./SectionHeader";
 import "../assets/styles/Education.scss";
 
 type EducationItem = {
@@ -34,27 +35,27 @@ const HONORS: HonorItem[] = [
 
 function Education() {
   return (
-    <div className="container education-container" id="education">
+    <div className="container section-block education-container" id="education">
       <div className="education-inner">
         <RevealOnScroll>
-          <h1>Education</h1>
+          <SectionHeader title="Education" subtitle="Graduate and undergraduate training in CS and ECE" />
         </RevealOnScroll>
         <div className="education-grid">
           {EDUCATION.map((item, index) => (
             <RevealOnScroll key={index} delay={index * 90}>
-              <article className="edu-card">
+              <article className="edu-card glass-panel">
               <div className="edu-card-content">
-                <span className="edu-date">{item.dates}</span>
-                <h3>{item.degree}</h3>
-                <p className="edu-school">{item.school}</p>
+                <span className="card-meta">{item.dates}</span>
+                <h3 className="card-title">{item.degree}</h3>
+                <p className="card-subtitle edu-school">{item.school}</p>
               </div>
               </article>
             </RevealOnScroll>
           ))}
         </div>
 
-        <RevealOnScroll className="honors-section" delay={180}>
-          <h2 className="honors-title">Honors & Awards</h2>
+        <RevealOnScroll className="honors-section glass-panel" delay={180}>
+          <h2 className="honors-title card-title">Honors & Awards</h2>
           <ul className="honors-list">
             {HONORS.map((item, index) => (
               <li key={index}>

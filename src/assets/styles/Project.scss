@@ -3,22 +3,18 @@
 .projects-container {
   display: flex;
   flex-direction: column;
-  padding: clamp(2.5rem, 6%, 4rem) clamp(1rem, 8%, 5rem);
+  padding: 0 clamp(1rem, 8%, 5rem);
   text-align: left;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   box-sizing: border-box;
-
-  > h1 {
-    margin-bottom: 1.5rem;
-  }
 }
 
 .projects-container .projects-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1.75rem;
+  gap: 1.25rem;
 }
 
 .projects-container .projects-grid .project {
@@ -26,102 +22,35 @@
   flex-direction: column;
   text-align: left;
   overflow: hidden;
-  @include glass-panel;
   padding-bottom: 0;
-
-  &:hover {
-    @include glass-panel-hover;
-  }
 }
 
 .projects-container .projects-grid .project > h2 {
-  padding: 1.1rem 1.25rem 0;
-  font-size: 1.1rem;
-  font-weight: 600;
-  letter-spacing: -0.01em;
+  padding: 1rem 1.2rem 0;
+  font-size: 1.05rem;
   margin: 0;
   line-height: 1.35;
-  color: #f0f2f5;
 }
 
 .projects-container .projects-grid .project > .project-link {
   display: inline-block;
-  padding: 0.25rem 1.25rem 0;
-  font-size: 0.85rem;
-  font-weight: 500;
-  color: #42a5f5;
-  text-decoration: none;
-  transition: color 0.2s ease;
-
-  &:hover {
-    color: #64b5f6;
-    text-decoration: underline;
-  }
+  padding: 0.2rem 1.2rem 0;
+  font-size: 0.82rem;
 }
 
 .projects-container .projects-grid .project > p {
-  padding: 0.5rem 1.25rem 1.25rem;
+  padding: 0.45rem 1.2rem 1.15rem;
   margin: 0;
-  font-size: 0.9rem;
-  line-height: 1.6;
-  opacity: 0.9;
-  color: #d8dce0;
-}
-
-.light-mode .projects-container .projects-grid .project > h2 {
-  color: #0d1116;
-}
-
-.light-mode .projects-container .projects-grid .project > .project-link {
-  color: #1e88e5;
-
-  &:hover {
-    color: #1976d2;
-  }
-}
-
-.light-mode .projects-container .projects-grid .project > p {
-  color: #374151;
+  font-size: 0.88rem;
 }
 
 @media screen and (max-width: 768px) {
-  .projects-container {
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
-  }
-
   .projects-container .projects-grid {
     grid-template-columns: 1fr;
-    gap: 1.25rem;
-  }
-
-  .projects-container .projects-grid .project > h2 {
-    padding: 1rem 1.1rem 0;
-  }
-
-  .projects-container .projects-grid .project > .project-link {
-    padding: 0.2rem 1.1rem 0;
-  }
-
-  .projects-container .projects-grid .project > p {
-    padding: 0.4rem 1.1rem 1.1rem;
   }
 }
 
 @media screen and (max-width: 480px) {
-  .projects-container {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  .projects-container .projects-grid .project > h2 {
-    font-size: 1.05rem;
-  }
-
-  .projects-container .projects-grid .project > p {
-    font-size: 0.875rem;
-  }
-
   .project-image-mask {
     height: 180px;
   }

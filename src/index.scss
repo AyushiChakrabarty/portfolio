@@ -1,5 +1,7 @@
+@import "./assets/styles/tokens";
 @import "./assets/styles/glass";
 @import "./assets/styles/motion";
+@import "./assets/styles/sections";
 
 body {
   margin: 0;
@@ -18,8 +20,7 @@ code {
 
 .main-container {
   position: relative;
-  background-color: #0d1116;
-
+  background-color: var(--surface-base);
 }
 
 a {
@@ -32,25 +33,13 @@ a:hover {
 }
 
 p, a, h1, h2, h3, h4, h5, label, button {
-  color: white;
+  color: var(--text-primary);
   font-family: "Lato", sans-serif;
-}
-
-/* Section headings centered (Expertise, Key Projects, Professional Experience) */
-.skills-container h1,
-.projects-container h1,
-.items-container h1,
-.certifications-inner h1,
-.highlights-inner h1,
-.education-inner h1,
-.publications-inner h1,
-.connect-content h1 {
-  text-align: center;
 }
 
 .navigation-bar {
   justify-content: space-between;
-  background-color: #0d1116;
+  background-color: var(--surface-base);
 
   button {
     font-size: 1.1rem;
@@ -85,7 +74,7 @@ p, a, h1, h2, h3, h4, h5, label, button {
   }
 }
 
-.container {
+.container.hero-container {
   margin-top: 64px;
   width: 100%;
   display: flex;
@@ -106,7 +95,7 @@ p, a, h1, h2, h3, h4, h5, label, button {
 }
 
 @media screen and (max-width: 768px) {
-  .container {
+  .container.hero-container {
     margin-top: 56px;
   }
 }
@@ -116,25 +105,13 @@ p, a, h1, h2, h3, h4, h5, label, button {
     font-size: 1rem !important;
   }
 
-  .container {
+  .container.hero-container {
     margin-top: 56px;
   }
 
   .header-image,
   .header-image img {
     height: 280px;
-  }
-
-  /* Section headings scale down on phone */
-  .skills-container h1,
-  .projects-container h1,
-  .items-container h1,
-  .certifications-inner h1,
-  .highlights-inner h1,
-  .education-inner h1,
-  .publications-inner h1,
-  .connect-content h1 {
-    font-size: 1.75rem !important;
   }
 }
 
@@ -155,14 +132,14 @@ p, a, h1, h2, h3, h4, h5, label, button {
 }
 
 .light-mode {
-  background-color: #f8f9fa;
+  background-color: var(--surface-base);
 
   .navigation-bar {
-    background-color: #f8f9fa;
+    background-color: var(--surface-base);
   }
 
   p, a, h1, h2, h3, h4, h5, label, button {
-    color: #0d1116;
+    color: var(--text-primary);
   }
 
   a:hover {
@@ -187,20 +164,16 @@ p, a, h1, h2, h3, h4, h5, label, button {
     box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
   }
 
-  .vertical-timeline::before {
-    background-color: rgba(0, 0, 0, 0.08);
-  }
-
   .vertical-timeline--animate .vertical-timeline-element-content.bounce-in {
-    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+    box-shadow: var(--shadow-soft);
   }
 
   .vertical-timeline--two-columns .vertical-timeline-element-content .vertical-timeline-element-date {
-    color: gray;
+    color: var(--text-muted);
   }
 
   .vertical-timeline-element-content-arrow {
-    border-right: 7px solid rgba(0, 0, 0, 0.08) !important;
+    border-right: 7px solid rgba(15, 23, 42, 0.08) !important;
   }
 
   .flex-chips .chip-title {

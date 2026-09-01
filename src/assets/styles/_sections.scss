@@ -1,0 +1,88 @@
+.site-content {
+  position: relative;
+  background-color: var(--surface-base);
+}
+
+.site-content .container,
+.site-content #history,
+.site-content .projects-container,
+.site-content .connect-section {
+  margin-top: 0;
+  background: transparent;
+}
+
+.site-content .items-container {
+  padding: 0 clamp(1rem, 8%, 5rem);
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.site-content .container {
+  padding-top: clamp(3.25rem, 6vw, 4.75rem);
+  padding-bottom: clamp(2.75rem, 5vw, 4.25rem);
+}
+
+.site-content #history,
+.site-content .projects-container {
+  padding-top: clamp(3.25rem, 6vw, 4.75rem);
+  padding-bottom: clamp(2.75rem, 5vw, 4.25rem);
+}
+
+.site-content .section-block + .section-block {
+  border-top: 1px solid var(--border-subtle);
+}
+
+.section-header {
+  text-align: center;
+  margin: 0 auto 2.25rem;
+  max-width: 40rem;
+}
+
+.section-heading {
+  font-size: clamp(1.65rem, 2.8vw, 2.1rem);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  color: var(--text-primary);
+  margin: 0;
+  line-height: 1.15;
+}
+
+.section-heading::after {
+  content: "";
+  display: block;
+  width: 36px;
+  height: 2px;
+  margin: 0.7rem auto 0;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--accent-strong), transparent);
+}
+
+.section-subtitle {
+  margin: 0.85rem 0 0;
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: var(--text-muted);
+}
+
+.highlights-grid .reveal-on-scroll,
+.projects-grid .reveal-on-scroll,
+.education-grid .reveal-on-scroll,
+.publications-list .reveal-on-scroll,
+.certifications-grid .reveal-on-scroll,
+.skills-grid .reveal-on-scroll {
+  height: 100%;
+}
+
+.highlights-grid .highlight-card,
+.projects-grid .project,
+.education-grid .edu-card,
+.publications-list .pub-card,
+.certifications-grid .cert-card,
+.skills-grid .skill,
+.honors-section,
+.certifications-ongoing,
+.connect-content {
+  height: 100%;
+}

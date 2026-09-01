@@ -1,92 +1,31 @@
 @import "glass";
 
 .highlights-container {
-  padding: clamp(2rem, 5%, 4rem) clamp(1rem, 6%, 4rem);
   width: 100%;
   box-sizing: border-box;
 }
 
 .highlights-inner {
-  max-width: 900px;
+  max-width: 960px;
   margin: 0 auto;
-  text-align: center;
-
-  h1 {
-    margin-bottom: 0.25em;
-  }
-}
-
-.highlights-subtitle {
-  margin-top: 0;
-  margin-bottom: 2rem;
-  opacity: 0.85;
-  font-size: 1rem;
 }
 
 .highlights-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.25rem;
+  gap: 1rem;
   text-align: left;
 }
 
-.highlight-card {
-  @include glass-panel;
-  overflow: hidden;
-
-  &:hover {
-    @include glass-panel-hover;
-    border-color: rgba(30, 136, 229, 0.35);
-  }
-}
-
 .highlight-card-content {
-  padding: 1.25rem 1.5rem;
-}
-
-.highlight-date {
-  display: inline-block;
-  font-size: 0.8rem;
-  opacity: 0.7;
-  margin-bottom: 0.5rem;
-  color: #e6e8eb;
-}
-
-.light-mode .highlight-date {
-  color: #0d1116;
-}
-
-.highlight-card h3 {
-  font-size: 1.15rem;
-  margin: 0 0 0.5rem 0;
-  line-height: 1.35;
-  font-weight: 600;
-}
-
-.highlight-card p {
-  font-size: 0.95rem;
-  margin: 0 0 1rem 0;
-  line-height: 1.5;
-  opacity: 0.9;
+  padding: 1.15rem 1.25rem;
 }
 
 .highlight-link {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
-  font-size: 0.9rem;
-  color: #1e88e5;
-  text-decoration: none;
-  transition: opacity 0.2s ease;
-
-  &:hover {
-    opacity: 0.85;
-    text-decoration: underline;
-  }
-
-  .light-mode & {
-    color: #1e88e5;
-  }
+  font-size: 0.85rem;
 }
 
 @media screen and (min-width: 600px) {
@@ -101,47 +40,8 @@
   }
 }
 
-@media screen and (max-width: 1024px) {
-  .highlights-inner {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .highlights-container {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  .highlights-inner h1 {
-    font-size: 1.65rem !important;
-  }
-
-  .highlight-card-content {
-    padding: 1rem 1.25rem;
-  }
-}
-
 @media screen and (max-width: 480px) {
-  .highlights-container {
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
-  }
-
-  .highlights-inner h1 {
-    font-size: 1.5rem !important;
-  }
-
-  .highlights-subtitle {
-    font-size: 0.9rem;
-  }
-
-  .highlight-card h3 {
-    font-size: 1.05rem;
-  }
-
-  .highlight-card p {
-    font-size: 0.9rem;
+  .highlight-card-content {
+    padding: 1rem 1.1rem;
   }
 }

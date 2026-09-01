@@ -4,6 +4,7 @@ import trafficImage from '../assets/images/traffic.avif';
 import roboticImage from '../assets/images/robotic.png';
 import wildfireImage from '../assets/images/wildfire.webp';
 import { RevealOnScroll } from "./effects";
+import SectionHeader from "./SectionHeader";
 import '../assets/styles/Project.scss';
 
 const PROJECTS = [
@@ -42,9 +43,12 @@ const PROJECTS = [
 
 function Project() {
   return (
-    <div className="projects-container" id="projects">
+    <div className="projects-container section-block" id="projects">
       <RevealOnScroll>
-        <h1>Key Projects</h1>
+        <SectionHeader
+          title="Key Projects"
+          subtitle="Selected work in RAG, computer vision, and edge ML"
+        />
       </RevealOnScroll>
       <div className="projects-grid">
         {PROJECTS.map((item, index) => (
@@ -52,11 +56,11 @@ function Project() {
             <div className="project-image-mask">
               <img src={item.image} alt={item.alt} loading="lazy" />
             </div>
-            <h2>{item.title}</h2>
+            <h2 className="card-title">{item.title}</h2>
             {item.link ? (
-              <a href={item.link} target="_blank" rel="noreferrer" className="project-link">View project →</a>
+              <a href={item.link} target="_blank" rel="noreferrer" className="project-link text-link">View project →</a>
             ) : null}
-            <p>{item.description}</p>
+            <p className="card-body">{item.description}</p>
           </RevealOnScroll>
         ))}
       </div>

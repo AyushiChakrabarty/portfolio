@@ -1,0 +1,76 @@
+.main-container {
+  --accent: #42a5f5;
+  --accent-strong: #1e88e5;
+  --accent-soft: rgba(66, 165, 245, 0.1);
+  --surface-base: #0b0e13;
+  --surface-glass: rgba(13, 17, 22, 0.66);
+  --surface-glass-hover: rgba(13, 17, 22, 0.76);
+  --text-primary: #f0f2f5;
+  --text-secondary: #c2c7cf;
+  --text-muted: #8b919a;
+  --border-subtle: rgba(255, 255, 255, 0.11);
+  --shadow-soft: 0 10px 36px rgba(0, 0, 0, 0.2);
+}
+
+.main-container.light-mode {
+  --accent: #1e88e5;
+  --accent-strong: #1565c0;
+  --accent-soft: rgba(30, 136, 229, 0.08);
+  --surface-base: #f4f7fb;
+  --surface-glass: rgba(255, 255, 255, 0.72);
+  --surface-glass-hover: rgba(255, 255, 255, 0.82);
+  --text-primary: #0d1116;
+  --text-secondary: #374151;
+  --text-muted: #6b7280;
+  --border-subtle: rgba(15, 23, 42, 0.12);
+  --shadow-soft: 0 10px 36px rgba(15, 23, 42, 0.07);
+}
+
+.lead-emphasis {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.accent-text {
+  color: var(--accent-strong);
+  font-weight: 600;
+}
+
+.metric-text {
+  color: var(--accent-strong);
+  font-weight: 600;
+}
+
+.card-title {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.card-subtitle {
+  color: var(--text-secondary);
+}
+
+.card-body {
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+
+.card-meta {
+  color: var(--text-muted);
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.text-link {
+  color: var(--text-secondary);
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: var(--accent-strong);
+    text-decoration: underline;
+  }
+}

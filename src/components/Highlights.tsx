@@ -2,6 +2,7 @@ import React from "react";
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import { RevealOnScroll } from "./effects";
+import SectionHeader from "./SectionHeader";
 import '../assets/styles/Highlights.scss';
 
 export type HighlightItem = {
@@ -36,27 +37,27 @@ function Highlights() {
   const highlights = DEFAULT_HIGHLIGHTS;
 
   return (
-    <div className="container highlights-container" id="highlights">
+    <div className="container section-block highlights-container" id="highlights">
       <div className="highlights-inner">
         <RevealOnScroll>
-          <h1>Key Highlights</h1>
-        </RevealOnScroll>
-        <RevealOnScroll delay={100}>
-          <p className="highlights-subtitle">Selected posts and updates from LinkedIn</p>
+          <SectionHeader
+            title="Key Highlights"
+            subtitle="Selected posts and updates from LinkedIn"
+          />
         </RevealOnScroll>
         <div className="highlights-grid">
           {highlights.map((item, index) => (
             <RevealOnScroll key={index} delay={index * 90}>
-              <article className="highlight-card">
+              <article className="highlight-card glass-panel">
               <div className="highlight-card-content">
-                {item.date && <span className="highlight-date">{item.date}</span>}
-                <h3>{item.title}</h3>
-                <p>{item.excerpt}</p>
+                {item.date && <span className="card-meta">{item.date}</span>}
+                <h3 className="card-title">{item.title}</h3>
+                <p className="card-body">{item.excerpt}</p>
                 <a
                   href={item.postUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="highlight-link"
+                  className="highlight-link text-link"
                 >
                   <LinkedInIcon fontSize="small" />
                   View on LinkedIn

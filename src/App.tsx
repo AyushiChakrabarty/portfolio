@@ -36,14 +36,16 @@ function App() {
         <Navigation parentToChild={{mode}} modeChange={handleModeChange}/>
         <PageTransition>
             <Main/>
-            <Expertise/>
-            <Timeline/>
-            <Project/>
-            <Education/>
-            <Publications/>
-            <Highlights/>
-            <Certifications/>
-            <Connect/>
+            <main className="site-content">
+                <Expertise/>
+                <Timeline/>
+                <Project/>
+                <Education/>
+                <Publications/>
+                <Highlights/>
+                <Certifications/>
+                <Connect/>
+            </main>
         </PageTransition>
         <Footer />
     </div>
