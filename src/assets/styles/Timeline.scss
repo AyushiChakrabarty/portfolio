@@ -1,73 +1,97 @@
+@import "glass";
+
 .vertical-timeline span {
-    color: white;
-    font-family: 'Courier Prime', monospace;
-}
-
-.vertical-timeline p {
-    color: rgb(39, 40, 34);
-}
-
-.vertical-timeline-element p {
-    color: rgb(39, 40, 34);
-}
-
-.vertical-timeline-element h3 {
-    color: rgb(39, 40, 34);
-}
-
-.vertical-timeline-element h4 {
-    color: rgb(39, 40, 34);
-}
-
-.vertical-timeline-element span {
-    color: rgb(39, 40, 34);
+  color: white;
+  font-family: 'Courier Prime', monospace;
 }
 
 .vertical-timeline-element .vertical-timeline-element-date {
-    color: white;
+  color: white;
 }
 
 .svg-inline--fa {
-    color: white;
+  color: white;
+}
+
+.dark-mode {
+  .vertical-timeline-element-content {
+    @include glass-panel(12px);
+    color: #f0f2f5 !important;
+    box-shadow:
+      0 8px 32px rgba(0, 0, 0, 0.14),
+      inset 0 1px 0 rgba(255, 255, 255, 0.06) !important;
+  }
+
+  .vertical-timeline-element p,
+  .vertical-timeline-element h3,
+  .vertical-timeline-element h4,
+  .vertical-timeline-element span {
+    color: #f0f2f5 !important;
+  }
+
+  .vertical-timeline-element-content-arrow {
+    border-right: 7px solid rgba(255, 255, 255, 0.08) !important;
+  }
+}
+
+.light-mode {
+  .vertical-timeline-element-content {
+    @include glass-panel(12px);
+    color: rgb(39, 40, 34) !important;
+  }
+
+  .vertical-timeline-element p,
+  .vertical-timeline-element h3,
+  .vertical-timeline-element h4,
+  .vertical-timeline-element span {
+    color: rgb(39, 40, 34) !important;
+  }
+
+  .vertical-timeline-element .vertical-timeline-element-date {
+    color: rgb(39, 40, 34);
+  }
+
+  .vertical-timeline-element-content-arrow {
+    border-right: 7px solid rgba(255, 255, 255, 0.55) !important;
+  }
 }
 
 @media screen and (max-width: 1170px) {
-    .vertical-timeline-element .vertical-timeline-element-date {
-        color: rgb(39, 40, 34);
-    }
+  .vertical-timeline-element .vertical-timeline-element-date {
+    color: rgb(39, 40, 34);
+  }
 }
 
-/* Tablet: timeline content padding */
 @media screen and (max-width: 768px) {
-    .vertical-timeline-element-content {
-        padding: 1rem 1.25rem !important;
-    }
+  .vertical-timeline-element-content {
+    padding: 1rem 1.25rem !important;
+  }
 
-    .vertical-timeline-element h3,
-    .vertical-timeline-element h4 {
-        font-size: 1rem !important;
-    }
+  .vertical-timeline-element h3,
+  .vertical-timeline-element h4 {
+    font-size: 1rem !important;
+  }
 
-    .vertical-timeline-element p {
-        font-size: 0.9rem;
-    }
+  .vertical-timeline-element p {
+    font-size: 0.9rem;
+  }
 }
 
 @media screen and (max-width: 480px) {
-    .vertical-timeline-element-content {
-        padding: 0.9rem 1rem !important;
-    }
+  .vertical-timeline-element-content {
+    padding: 0.9rem 1rem !important;
+  }
 
-    .vertical-timeline-element .vertical-timeline-element-date {
-        font-size: 0.85rem !important;
-    }
+  .vertical-timeline-element .vertical-timeline-element-date {
+    font-size: 0.85rem !important;
+  }
 
-    .vertical-timeline-element h3,
-    .vertical-timeline-element h4 {
-        font-size: 0.95rem !important;
-    }
+  .vertical-timeline-element h3,
+  .vertical-timeline-element h4 {
+    font-size: 0.95rem !important;
+  }
 
-    .vertical-timeline-element p {
-        font-size: 0.85rem;
-    }
+  .vertical-timeline-element p {
+    font-size: 0.85rem;
+  }
 }

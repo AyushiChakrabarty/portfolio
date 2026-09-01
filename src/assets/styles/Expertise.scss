@@ -1,3 +1,5 @@
+@import "glass";
+
 .skills-container {
   padding: clamp(2.5rem, 6%, 4rem) clamp(1rem, 8%, 5rem);
   display: flex;
@@ -25,15 +27,6 @@
   align-items: flex-start;
   text-align: left;
   padding: 1.75rem 1.5rem;
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  transition: border-color 0.2s ease, background 0.2s ease;
-
-  &:hover {
-    border-color: rgba(255, 255, 255, 0.1);
-    background: rgba(255, 255, 255, 0.05);
-  }
 }
 
 .skill-header {
@@ -119,16 +112,6 @@
 }
 
 /* Light mode */
-.light-mode .skills-container .skills-grid .skill {
-  background: rgba(255, 255, 255, 0.6);
-  border-color: rgba(0, 0, 0, 0.06);
-
-  &:hover {
-    background: rgba(255, 255, 255, 0.75);
-    border-color: rgba(0, 0, 0, 0.1);
-  }
-}
-
 .light-mode .skills-container .skill .svg-inline-fa,
 .light-mode .skills-container .skill svg {
   color: rgba(0, 0, 0, 0.7);

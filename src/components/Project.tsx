@@ -3,43 +3,62 @@ import ragImage from '../assets/images/rag_retrieval_generation.avif';
 import trafficImage from '../assets/images/traffic.avif';
 import roboticImage from '../assets/images/robotic.png';
 import wildfireImage from '../assets/images/wildfire.webp';
+import { RevealOnScroll } from "./effects";
 import '../assets/styles/Project.scss';
 
-const PROJECT_IMAGES = {
-  rag: ragImage,
-  cut: roboticImage,
-  traffic: trafficImage,
-  wildfire: wildfireImage,
-};
+const PROJECTS = [
+  {
+    key: "rag",
+    image: ragImage,
+    alt: "RAG and question answering",
+    title: "RAG for Question Answering",
+    link: "https://drive.google.com/file/d/1QNHGBLm2z-r3N7Cq29m4XaLrujSTyydd/view",
+    description: "Developed and evaluated an advanced RAG pipeline using hybrid retrieval, reranking, and query optimization, improving answer correctness by 18% and enhancing precision, recall, and faithfulness metrics.",
+  },
+  {
+    key: "cut",
+    image: roboticImage,
+    alt: "Robotic simulations",
+    title: "Contrastive Unpaired Translation (CUT) for Robotic Simulations",
+    description: "Optimized CUT models on robotic simulation datasets reducing FID scores by ~25% and implementing a FastCUT variant that trained 1.7× faster with no loss in output quality.",
+  },
+  {
+    key: "traffic",
+    image: trafficImage,
+    alt: "Traffic camera analysis",
+    title: "Live Traffic Camera Analysis for Improved Navigation",
+    link: "https://github.com/AyushiChakrabarty/AC_CS6476_Traffic-Navigation",
+    description: "Designed and fine-tuned YOLOv8 and Faster R-CNN models for real-time vehicle detection from live traffic camera feeds, achieving an 83% improvement in mAP50 and demonstrating a scalable, privacy-preserving traffic monitoring solution with a proof-of-concept web app.",
+  },
+  {
+    key: "wildfire",
+    image: wildfireImage,
+    alt: "Forest fire detection",
+    title: "Forest Fire Detection using Vision Techniques",
+    link: "https://drive.google.com/file/d/1LBEeR3VcAnm0wtobmtZE1SkIqoqtq0ge/view?usp=sharing",
+    description: "Built a real-time wildfire detection system from 200GB+ Landsat-8 imagery using semantic segmentation (~97% recall). Optimized for edge: 2.5× lower power (1–1.6W) via quantization and pruning on ZCU104.",
+  },
+];
 
 function Project() {
   return (
     <div className="projects-container" id="projects">
-      <h1>Key Projects</h1>
+      <RevealOnScroll>
+        <h1>Key Projects</h1>
+      </RevealOnScroll>
       <div className="projects-grid">
-        <div className="project">
-          <img src={PROJECT_IMAGES.rag} className="zoom" alt="RAG and question answering" width="100%" loading="lazy" />
-          <h2>RAG for Question Answering</h2>
-          <a href="https://drive.google.com/file/d/1QNHGBLm2z-r3N7Cq29m4XaLrujSTyydd/view" target="_blank" rel="noreferrer" className="project-link">View project →</a>
-          <p>Developed and evaluated an advanced RAG pipeline using hybrid retrieval, reranking, and query optimization, improving answer correctness by 18% and enhancing precision, recall, and faithfulness metrics.</p>
-        </div>
-        <div className="project">
-          <img src={PROJECT_IMAGES.cut} className="zoom" alt="Robotic simulations" width="100%" loading="lazy" />
-          <h2>Contrastive Unpaired Translation (CUT) for Robotic Simulations</h2>
-          <p>Optimized CUT models on robotic simulation datasets reducing FID scores by ~25% and implementing a FastCUT variant that trained 1.7× faster with no loss in output quality.</p>
-        </div>
-        <div className="project">
-          <img src={PROJECT_IMAGES.traffic} className="zoom" alt="Traffic camera analysis" width="100%" loading="lazy" />
-          <h2>Live Traffic Camera Analysis for Improved Navigation</h2>
-          <a href="https://github.com/AyushiChakrabarty/AC_CS6476_Traffic-Navigation" target="_blank" rel="noreferrer" className="project-link">View project →</a>
-          <p>Designed and fine-tuned YOLOv8 and Faster R-CNN models for real-time vehicle detection from live traffic camera feeds, achieving an 83% improvement in mAP50 and demonstrating a scalable, privacy-preserving traffic monitoring solution with a proof-of-concept web app.</p>
-        </div>
-        <div className="project">
-          <img src={PROJECT_IMAGES.wildfire} className="zoom" alt="Forest fire detection" width="100%" loading="lazy" />
-          <h2>Forest Fire Detection using Vision Techniques</h2>
-          <a href="https://drive.google.com/file/d/1LBEeR3VcAnm0wtobmtZE1SkIqoqtq0ge/view?usp=sharing" target="_blank" rel="noreferrer" className="project-link">View project →</a>
-          <p>Built a real-time wildfire detection system from 200GB+ Landsat-8 imagery using semantic segmentation (~97% recall). Optimized for edge: 2.5× lower power (1–1.6W) via quantization and pruning on ZCU104.</p>
-        </div>
+        {PROJECTS.map((item, index) => (
+          <RevealOnScroll key={item.key} className="project glass-panel" delay={index * 90}>
+            <div className="project-image-mask">
+              <img src={item.image} alt={item.alt} loading="lazy" />
+            </div>
+            <h2>{item.title}</h2>
+            {item.link ? (
+              <a href={item.link} target="_blank" rel="noreferrer" className="project-link">View project →</a>
+            ) : null}
+            <p>{item.description}</p>
+          </RevealOnScroll>
+        ))}
       </div>
     </div>
   );

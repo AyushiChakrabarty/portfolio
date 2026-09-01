@@ -1,4 +1,5 @@
 import React from "react";
+import { RevealOnScroll } from "./effects";
 import "../assets/styles/Education.scss";
 
 type EducationItem = {
@@ -35,20 +36,24 @@ function Education() {
   return (
     <div className="container education-container" id="education">
       <div className="education-inner">
-        <h1>Education</h1>
+        <RevealOnScroll>
+          <h1>Education</h1>
+        </RevealOnScroll>
         <div className="education-grid">
           {EDUCATION.map((item, index) => (
-            <article key={index} className="edu-card">
+            <RevealOnScroll key={index} delay={index * 90}>
+              <article className="edu-card">
               <div className="edu-card-content">
                 <span className="edu-date">{item.dates}</span>
                 <h3>{item.degree}</h3>
                 <p className="edu-school">{item.school}</p>
               </div>
-            </article>
+              </article>
+            </RevealOnScroll>
           ))}
         </div>
 
-        <div className="honors-section">
+        <RevealOnScroll className="honors-section" delay={180}>
           <h2 className="honors-title">Honors & Awards</h2>
           <ul className="honors-list">
             {HONORS.map((item, index) => (
@@ -58,7 +63,7 @@ function Education() {
               </li>
             ))}
           </ul>
-        </div>
+        </RevealOnScroll>
       </div>
     </div>
   );

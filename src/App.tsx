@@ -12,7 +12,7 @@ import {
   Navigation,
   Footer,
 } from "./components";
-import FadeIn from './components/FadeIn';
+import { CustomCursor, PageTransition } from "./components/effects";
 import './index.scss';
 
 function App() {
@@ -32,8 +32,9 @@ function App() {
 
     return (
     <div className={`main-container ${mode === 'dark' ? 'dark-mode' : 'light-mode'}`}>
+        <CustomCursor />
         <Navigation parentToChild={{mode}} modeChange={handleModeChange}/>
-        <FadeIn transitionDuration={700}>
+        <PageTransition>
             <Main/>
             <Expertise/>
             <Timeline/>
@@ -43,7 +44,7 @@ function App() {
             <Highlights/>
             <Certifications/>
             <Connect/>
-        </FadeIn>
+        </PageTransition>
         <Footer />
     </div>
     );

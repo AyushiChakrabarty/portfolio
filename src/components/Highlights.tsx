@@ -1,6 +1,7 @@
 import React from "react";
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
+import { RevealOnScroll } from "./effects";
 import '../assets/styles/Highlights.scss';
 
 export type HighlightItem = {
@@ -37,11 +38,16 @@ function Highlights() {
   return (
     <div className="container highlights-container" id="highlights">
       <div className="highlights-inner">
-        <h1>Key Highlights</h1>
-        <p className="highlights-subtitle">Selected posts and updates from LinkedIn</p>
+        <RevealOnScroll>
+          <h1>Key Highlights</h1>
+        </RevealOnScroll>
+        <RevealOnScroll delay={100}>
+          <p className="highlights-subtitle">Selected posts and updates from LinkedIn</p>
+        </RevealOnScroll>
         <div className="highlights-grid">
           {highlights.map((item, index) => (
-            <article key={index} className="highlight-card">
+            <RevealOnScroll key={index} delay={index * 90}>
+              <article className="highlight-card">
               <div className="highlight-card-content">
                 {item.date && <span className="highlight-date">{item.date}</span>}
                 <h3>{item.title}</h3>
@@ -57,7 +63,8 @@ function Highlights() {
                   <OpenInNewIcon fontSize="small" />
                 </a>
               </div>
-            </article>
+              </article>
+            </RevealOnScroll>
           ))}
         </div>
       </div>

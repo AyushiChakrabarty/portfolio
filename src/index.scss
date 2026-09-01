@@ -1,3 +1,6 @@
+@import "./assets/styles/glass";
+@import "./assets/styles/motion";
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -34,10 +37,14 @@ p, a, h1, h2, h3, h4, h5, label, button {
 }
 
 /* Section headings centered (Expertise, Key Projects, Professional Experience) */
-.skills-container > h1,
-.projects-container > h1,
-.items-container > h1,
-.certifications-inner > h1 {
+.skills-container h1,
+.projects-container h1,
+.items-container h1,
+.certifications-inner h1,
+.highlights-inner h1,
+.education-inner h1,
+.publications-inner h1,
+.connect-content h1 {
   text-align: center;
 }
 
@@ -119,11 +126,14 @@ p, a, h1, h2, h3, h4, h5, label, button {
   }
 
   /* Section headings scale down on phone */
-  .skills-container > h1,
-  .projects-container > h1,
-  .items-container > h1,
-  .certifications-inner > h1,
-  .highlights-inner > h1 {
+  .skills-container h1,
+  .projects-container h1,
+  .items-container h1,
+  .certifications-inner h1,
+  .highlights-inner h1,
+  .education-inner h1,
+  .publications-inner h1,
+  .connect-content h1 {
     font-size: 1.75rem !important;
   }
 }
@@ -165,19 +175,7 @@ p, a, h1, h2, h3, h4, h5, label, button {
   }
 
   .about-section {
-    /* Sky bluish gradient for light mode main section */
-    background: linear-gradient(
-      135deg,
-      #e8f4fc 0%,
-      #d6ebf9 25%,
-      #c5e2f7 50%,
-      #b3d9f4 75%,
-      #a8d4f2 100%
-    );
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
+    background: transparent;
   }
 
   .skills-container svg {

@@ -16,6 +16,8 @@ import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 
+import { MagneticWrap } from "./effects";
+
 const drawerWidth = 240;
 const navItems = [['Expertise', 'expertise'], ['History', 'history'], ['Projects', 'projects'], ['Education', 'education'], ['Publications', 'publications'], ['Highlights', 'highlights'], ['Certifications', 'certifications'], ['Connect', 'connect']];
 
@@ -94,9 +96,11 @@ function Navigation({parentToChild, modeChange}: any) {
           )}
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
-              <Button key={item[0]} onClick={() => scrollToSection(item[1])} sx={{ color: '#fff' }}>
-                {item[0]}
-              </Button>
+              <MagneticWrap key={item[0]}>
+                <Button onClick={() => scrollToSection(item[1])} sx={{ color: '#fff' }}>
+                  {item[0]}
+                </Button>
+              </MagneticWrap>
             ))}
           </Box>
         </Toolbar>

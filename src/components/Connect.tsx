@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { MagneticWrap, RevealOnScroll } from "./effects";
 import '../assets/styles/Connect.scss';
 
 const TAGLINE = "Ideas → Impact. Let's build something together.";
@@ -42,7 +43,9 @@ function Connect() {
     <div id="connect" className="connect-section" ref={sectionRef}>
       <div className="items-container">
         <div className="connect-content">
-          <h1>Let's Connect!</h1>
+          <RevealOnScroll>
+            <h1>Let's Connect!</h1>
+          </RevealOnScroll>
           <p className={`connect-tagline ${visible ? "connect-tagline-visible" : ""}`}>
             {TAGLINE_WORDS.map((word, i) => (
               <React.Fragment key={i}>
@@ -59,9 +62,11 @@ function Connect() {
           <p className="connect-message">
             If you're excited about using AI to build, iterate, and ship impactful products, let's connect! :)
           </p>
-          <a href="mailto:ayushi.chakrabarty31@gmail.com" className="connect-email">
-            Email me
-          </a>
+          <MagneticWrap>
+            <a href="mailto:ayushi.chakrabarty31@gmail.com" className="connect-email">
+              Email me
+            </a>
+          </MagneticWrap>
         </div>
       </div>
     </div>

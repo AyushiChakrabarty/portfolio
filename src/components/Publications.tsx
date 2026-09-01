@@ -1,5 +1,6 @@
 import React from "react";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
+import { RevealOnScroll } from "./effects";
 import "../assets/styles/Publications.scss";
 
 type PublicationItem = {
@@ -44,11 +45,16 @@ function Publications() {
   return (
     <div className="container publications-container" id="publications">
       <div className="publications-inner">
-        <h1>Publications</h1>
-        <p className="publications-subtitle">Peer-reviewed research, book chapters, and academic resources</p>
+        <RevealOnScroll>
+          <h1>Publications</h1>
+        </RevealOnScroll>
+        <RevealOnScroll delay={100}>
+          <p className="publications-subtitle">Peer-reviewed research, book chapters, and academic resources</p>
+        </RevealOnScroll>
         <div className="publications-list">
           {PUBLICATIONS.map((pub, index) => (
-            <article key={index} className="pub-card">
+            <RevealOnScroll key={index} delay={index * 80}>
+              <article className="pub-card">
               <div className="pub-card-content">
                 <span className="pub-year">{pub.year}</span>
                 <h3>{pub.title}</h3>
@@ -66,7 +72,8 @@ function Publications() {
                   </a>
                 ) : null}
               </div>
-            </article>
+              </article>
+            </RevealOnScroll>
           ))}
         </div>
       </div>

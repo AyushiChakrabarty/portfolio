@@ -1,5 +1,6 @@
 import React from "react";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
+import { RevealOnScroll } from "./effects";
 import "../assets/styles/Certifications.scss";
 
 export type CertificationItem = {
@@ -57,11 +58,16 @@ function Certifications() {
   return (
     <div className="container certifications-container" id="certifications">
       <div className="certifications-inner">
-        <h1>Key Certifications</h1>
-        <p className="certifications-subtitle">Professional credentials in AI, ML, and cloud</p>
+        <RevealOnScroll>
+          <h1>Key Certifications</h1>
+        </RevealOnScroll>
+        <RevealOnScroll delay={100}>
+          <p className="certifications-subtitle">Professional credentials in AI, ML, and cloud</p>
+        </RevealOnScroll>
         <div className="certifications-grid">
           {CERTIFICATIONS.map((cert, index) => (
-            <article key={index} className="cert-card">
+            <RevealOnScroll key={index} delay={index * 70}>
+              <article className="cert-card">
               <div className="cert-card-content">
                 <span className="cert-date">{cert.date}</span>
                 <h3>{cert.title}</h3>
@@ -80,17 +86,18 @@ function Certifications() {
                   <span className="cert-id">ID: {cert.credentialId}</span>
                 ) : null}
               </div>
-            </article>
+              </article>
+            </RevealOnScroll>
           ))}
         </div>
-        <div className="certifications-ongoing">
+        <RevealOnScroll className="certifications-ongoing" delay={180}>
           <h3 className="ongoing-title">In progress</h3>
           <ul className="ongoing-list">
             {ONGOING.map((item, index) => (
               <li key={index}>{item}</li>
             ))}
           </ul>
-        </div>
+        </RevealOnScroll>
       </div>
     </div>
   );
