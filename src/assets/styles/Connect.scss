@@ -2,7 +2,13 @@
 
 .connect-section {
   position: relative;
-  padding: 0 clamp(1rem, 8%, 5rem) clamp(2.75rem, 5vw, 4.25rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: clamp(1rem, 8%, 5rem);
+  padding-right: clamp(1rem, 8%, 5rem);
   background: transparent;
 }
 
@@ -16,10 +22,35 @@
 }
 
 .connect-content {
+  width: 100%;
   max-width: 34rem;
-  text-align: center;
   margin: 0 auto;
-  padding: clamp(1.75rem, 4vw, 2.5rem) clamp(1.25rem, 4vw, 2rem);
+  padding: 2.5rem 2.25rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.connect-content .reveal-on-scroll {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.connect-content .section-header {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.connect-tagline,
+.connect-message {
+  width: 100%;
+  max-width: 28rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .connect-tagline {
@@ -34,7 +65,7 @@
 .connect-message {
   font-size: 0.95rem;
   line-height: 1.6;
-  margin-bottom: 1.15rem;
+  margin-bottom: 1.25rem;
   color: var(--text-secondary);
 }
 
@@ -55,7 +86,6 @@
   border: none;
   cursor: pointer;
   transition: background-color 0.2s ease, transform 0.2s ease;
-  margin-top: 0.35rem;
 }
 
 .connect-email:hover {
@@ -66,6 +96,10 @@
 }
 
 @media screen and (max-width: 480px) {
+  .connect-content {
+    padding: 2rem 1.5rem;
+  }
+
   .connect-tagline {
     font-size: 0.9rem;
   }
